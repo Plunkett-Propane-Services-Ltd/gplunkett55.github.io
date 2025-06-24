@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plunkett Propane Website Template</title>
+
+  <!-- 1) Library CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- 2) Your custom overrides -->
+  <style>
+    /* Override W3.CSS .w3-green everywhere */
+    .w3-green {
+      background-color: #086b41 !important;
+    }
+    .w3-hover-green:hover {
+      background-color: #086b41 !important;
+    }
+    .w3-text-green {
+      color: #086b41 !important;
+    }
+
+    body { font-family: "Lato", sans-serif; }
+    .mySlides { display: none; }
+
+    /* New styles for services grid */
+    .service-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      background: #fafafa;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .service-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      color: #086b41;
+    }
+
+    /* Adjust spacing under navbar */
+    #featured-image {
+      margin: 100px auto 40px auto;
+      max-width: 800px;
+    }
+
+    /* Contact-info styling */
+    #contact-info {
+      padding: 60px 20px;
+      color: white;
+    }
+    #contact-info h2 {
+      margin-bottom: 40px;
+    }
+    #contact-info .contact-data {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      line-height: 2;
+      text-align: center;
+    }
+    #contact-info i {
+      margin-right: 8px;
+    }
+
+    /* About Section styling (green background) */
+    #ABOUT {
+      background-color: #086b41; /* brand green */
+      color: white;
+      padding: 80px 20px 60px 20px;
+    }
+    #ABOUT h2, 
+    #ABOUT p,
+    #ABOUT strong {
+      color: white;
+    }
+    #ABOUT img {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Footer styling (green background) */
+    footer {
+      background: #086b41;     /* brand green */
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #e4f2ea;          /* light link color */
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Slideshow (Past Work) */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: 40px auto;
+    }
+    .slideshow-caption {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 0 3px 3px 0;
+      background: rgba(0, 0, 0, 0.5);
+      user-select: none;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+         href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="#SERVICES" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+      <a href="#ABOUT" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+      <a href="#contact-info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">
+          MORE <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="grills.html" class="w3-bar-item w3-button">Grills</a>
+          <a href="tanks.html" class="w3-bar-item w3-button">Propane Tanks</a>
+          <a href="accessories.html" class="w3-bar-item w3-button">Accessories</a>
+          <a href="fittings.html" class="w3-bar-item w3-button">Fittings & Regulators</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo"
+       class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+       style="margin-top:46px">
+    <a href="#SERVICES" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+    <a href="#ABOUT" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+    <a href="#contact-info" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    <a href="grills.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GRILLS</a>
+    <a href="tanks.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TANKS</a>
+    <a href="accessories.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ACCESSORIES</a>
+    <a href="fittings.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FITTINGS</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px; margin-top:46px;">
+
+    <!-- Banner / Logo -->
+    <div id="featured-image" class="w3-container w3-content w3-center w3-padding-64">
+      <img 
+        src="images/Plunkett logo.jpg" 
+        alt="Plunkett Propane Logo" 
+        style="width:100%; height:auto;"
+      />
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact-info" class="w3-container w3-green">
+      <h2 class="w3-wide w3-center">CONTACT US</h2>
+      <div class="contact-data">
+        <p><i class="fa fa-map-marker"></i> Bancroft, ON</p>
+        <p><i class="fa fa-phone"></i> 613-332-6231</p>
+        <p><i class="fa fa-envelope"></i> plunkett@live.ca</p>
+      </div>
+    </div>
+
+    <!-- Services Section (moved above About) -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px;" id="SERVICES">
+      <h2 class="w3-wide w3-center">OUR SERVICES</h2>
+      <p class="w3-opacity w3-center"><i>Your comfort is our priority.</i></p><br>
+
+      <!-- Services grid -->
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-third w3-margin-bottom">
+          <div class="service-card">
+            <i class="fa fa-fire service-icon"></i>
+            <h3>Heating Installation & Repair</h3>
+            <p>Professional installation, maintenance, and repair of all propane heating systems.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="service-card">
+            <i class="fa fa-snowflake-o service-icon"></i>
+            <h3>Air Conditioning Services</h3>
+            <p>Efficient and reliable A/C installation, tune-ups, and repairs to keep you cool.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="service-card">
+            <i class="fa fa-cube service-icon"></i>
+            <h3>Propane Tank Delivery</h3>
+            <p>Fast, scheduled delivery of 20lb and 100lb propane cylinders to your doorstep.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-third w3-margin-bottom">
+          <div class="service-card">
+            <i class="fa fa-bolt service-icon"></i>
+            <h3>Generator Installation</h3>
+            <p>Standby generator setup and maintenance for uninterrupted power during outages.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="service-card">
+            <i class="fa fa-cutlery service-icon"></i>
+            <h3>Outdoor Kitchen & Grill Prep</h3>
+            <p>Custom outdoor kitchen design and propane grill installation for your backyard oasis.</p>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="service-card">
+            <i class="fa fa-wrench service-icon"></i>
+            <h3>Appliance Repair & Sales</h3>
+            <p>Authorized sales, installation, and service of propane appliances: stoves, dryers, fireplaces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section (now below Services, green background) -->
+    <div class="w3-container w3-content w3-center w3-padding-64 w3-green w3-wide" style="max-width:900px;" id="ABOUT">
+      <h2 class="w3-wide">ABOUT US</h2>
+      <p class="w3-opacity"><i>Meet The Team</i></p>
+      <p class="w3-justify w3-center">
+        We are Plunkett Propane—your trusted source for reliable propane service in Bancroft, Ontario and surrounding areas.
+      </p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-third">
+          <p><strong>Trevor Plunkett</strong></p>
+          <img src="images/Trevor.jpg" class="w3-round w3-margin-bottom" alt="Trevor Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        </div>
+        <div class="w3-third">
+          <p><strong>Virginia Plunkett</strong></p>
+          <img src="images/Virginia.jpg" class="w3-round w3-margin-bottom" alt="Virginia Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        </div>
+        <div class="w3-third">
+          <p><strong>Owen Plunkett</strong></p>
+          <img src="images/Owen.jpg" class="w3-round" alt="Owen Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+
+    <!-- Slideshow Section (Past Work) -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px;" id="portfolio">
+      <h2 class="w3-wide w3-center">PAST WORK</h2>
+      <div class="slideshow-container">
+
+        <div class="mySlides w3-display-container">
+          <img src="images/work1.jpg" style="width:100%; border-radius:8px;">
+          <div class="slideshow-caption">Installed a commercial propane heater</div>
+        </div>
+
+        <div class="mySlides w3-display-container">
+          <img src="images/work2.jpg" style="width:100%; border-radius:8px;">
+          <div class="slideshow-caption">Outdoor kitchen setup with custom grill</div>
+        </div>
+
+        <div class="mySlides w3-display-container">
+          <img src="images/work3.jpg" style="width:100%; border-radius:8px;">
+          <div class="slideshow-caption">Generator installation for residential home</div>
+        </div>
+
+        <!-- Next/Prev Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
+
+  </div> <!-- end w3-content -->
+  
+  <!-- Footer -->
+  <footer>
+    <p>Designed by <a href="https://www.linkedin.com/in/gavin-plunkett" target="_blank">Gavin Plunkett</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile nav toggle
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // Slideshow logic
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
+
