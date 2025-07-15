@@ -86,6 +86,21 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
+    /* two‑column list for service areas */
+    .service-areas {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 600px;
+    column-count: 2;
+    column-gap: 2rem;
+    text-align: left;
+  }
+  .service-areas li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
     /* Footer styling (green background) */
     footer {
       background: #086b41;     /* brand green */
@@ -271,13 +286,35 @@
       </div>
     </div>
 
-    <!-- About Section (now below Services, green background) -->
-    <div class="w3-container w3-content w3-center w3-padding-64 w3-green w3-wide" style="max-width:900px;" id="ABOUT">
-      <h2 class="w3-wide">ABOUT US</h2>
-      <p class="w3-opacity"><i>Meet The Team</i></p>
-      <p class="w3-justify w3-center">
-        Founded in 2005, Plunkett Propane Services Ltd has been a trusted name in heating and propane appliance solutions throughout Bancroft and the surrounding area. We specialize in furnaces, fireplaces, ductwork, propane water heaters, air conditioners, standby generators, and everything in between with a strong focus on new construction homes and cottages. Additionally, we specialize in converting wood and oil heating systems to propane, guiding you through the process from start to finish for a seamless transition. Our experienced team is dedicated to delivering top-quality installations and customized solutions to ensure your comfort year-round. With three generations of experience, you can trust Plunkett Propane Services Ltd for reliable service, expert advice, and exceptional craftsmanship.
-      </p>
+  <!-- About Section (green background) -->
+  <div id="ABOUT"
+      class="w3-container w3-content w3-center w3-padding-64 w3-green w3-wide"
+      style="max-width:900px;">
+
+    <h2>ABOUT US</h2>
+    <p class="w3-opacity"><i>Meet The Team</i></p>
+    <p class="w3-justify w3-center" style="max-width:800px; margin:auto;">
+      Founded in 2005, Plunkett Propane Services Ltd has been a trusted name in heating and propane appliance solutions throughout Bancroft and the surrounding area. We specialize in furnaces, fireplaces, ductwork, propane water heaters, air conditioners, standby generators, and everything in between with a strong focus on new construction homes and cottages. Additionally, we specialize in converting wood and oil heating systems to propane, guiding you through the process from start to finish for a seamless transition. Our experienced team is dedicated to delivering top-quality installations and customized solutions to ensure your comfort year-round. With three generations of experience, you can trust Plunkett Propane Services Ltd for reliable service, expert advice, and exceptional craftsmanship.
+    </p>
+
+    <!-- now that ALL your <p> tags are closed, drop in the list -->
+    <h3 class="w3-text-white w3-center w3-margin-top">Service Areas</h3>
+    <ul class="service-areas">
+      <li>Bancroft</li>
+      <li>Barry’s Bay</li>
+      <li>Apsley</li>
+      <li>Haliburton</li>
+      <li>North Kawartha</li>
+      <li>Wilberforce</li>
+      <li>Maynooth</li>
+      <li>Hastings Highlands</li>
+      <li>Stoney Lake</li>
+      <li>And Surrounding Area!</li>
+    </ul>
+
+  </div>
+
+      <!-- Commented out until portraits are ready
       <div class="w3-row w3-padding-32">
         <div class="w3-third">
           <p><strong>Trevor Plunkett</strong></p>
@@ -292,6 +329,7 @@
           <img src="images/Owen.jpg" class="w3-round" alt="Owen Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         </div>
       </div>
+      -->
     </div>
 
     <!-- Slideshow Section (Past Work) -->
