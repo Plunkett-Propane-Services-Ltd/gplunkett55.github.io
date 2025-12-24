@@ -313,6 +313,42 @@
     .faq-q { font-weight: bold; }
     .faq-a { margin-top: 6px; color: #333; }
 
+  /*Fullscreen image modal*/
+  .img-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 18px;
+  }
+
+  .img-modal.open {
+    display: flex;
+  }
+
+  .img-modal img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .img-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    font-size: 18px;
+    cursor: pointer;
+  }
+
   /*prevent testimonial text from being clipped*/
   @media (max-width: 600px) {
     .review-slideshow-container {
@@ -335,6 +371,43 @@
     .prevReview { left: 6px; }
     .nextReview { right: 6px; }
   }
+
+  /*mobile support for slideshow*/ 
+  @media (max-width: 600px) {
+
+  /* Keep slideshow layout normal, but allow height to grow */
+  .slideshow-container {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+    padding: 0 56px; /* space for arrows */
+  }
+
+  /* Let slides flow naturally on mobile */
+  .mySlides {
+    position: relative;
+    inset: auto;
+    padding: 0;
+    display: none;
+  }
+
+  /* Show the active slide normally */
+  .mySlides.active {
+    display: block; /* NOT flex on mobile */
+  }
+
+  /* Center the arrows vertically */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+  }
+
+  .prev { left: 6px; }
+  .next { right: 6px; }
+}
+
 
   </style>
 
@@ -845,6 +918,13 @@
     </section>
   </div>
 
+  <!-- Fullscreen image modal -->
+  <div id="imgModal" class="img-modal" aria-hidden="true">
+    <button class="img-modal-close" type="button" aria-label="Close image">✕</button>
+    <img id="imgModalImg" alt="">
+  </div>
+
+
   <!-- Footer -->
   <footer>
     <div class="footer-logos">
@@ -904,9 +984,56 @@
       var slides = document.getElementsByClassName("mySlides");
       if (n > slides.length) slideIndex = 1;
       if (n < 1) slideIndex = slides.length;
-      for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[i].classList.remove("active");
+      }
+
       slides[slideIndex - 1].style.display = "block";
+      slides[slideIndex - 1].classList.add("active");
     }
   </script>
+  
+  <script>
+  // Fullscreen image modal logic
+  (function () {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("imgModalImg");
+    const closeBtn = document.querySelector(".img-modal-close");
+
+    function openModal(src, alt) {
+      modalImg.src = src;
+      modalImg.alt = alt || "";
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      modalImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    // Attach click handlers to slideshow images ONLY
+    const slideshowImgs = document.querySelectorAll("#portfolio .mySlides img");
+    slideshowImgs.forEach((img) => {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", () => openModal(img.src, img.alt));
+    });
+  })();
+</script>
 </body>
 </html>
