@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Plunkett Propane Services Ltd provides propane HVAC, fireplaces, generators, boilers, and appliance installation in Bancroft and surrounding areas. Trusted local service for 20+ years." />
 
+  <!-- Primary SEO -->
+  <title>HVAC & Propane Services in Bancroft, ON | Plunkett Propane Services Ltd</title>
+  <meta name="description" content="Plunkett Propane Services Ltd provides HVAC installation & repair, propane furnaces, fireplaces, hydronic/in-floor heating, generators, and propane appliances in Bancroft, ON and surrounding areas. Serving the region since 2005." />
+  <link rel="canonical" href="https://plunkettpropane.ca/" />
 
-  <!-- Website Title seen when searched online-->
-  <title>Plunkett Propane Services LTD.</title> 
+  <!-- Open Graph (Google/Bing + social sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Plunkett Propane Services Ltd">
+  <meta property="og:title" content="HVAC & Propane Services in Bancroft, ON | Plunkett Propane Services Ltd">
+  <meta property="og:description" content="Local HVAC + propane contractor serving Bancroft and surrounding areas since 2005. Furnaces, fireplaces, hydronic heating, generators, and more.">
+  <meta property="og:url" content="https://plunkettpropane.ca/">
+  <meta property="og:image" content="https://plunkettpropane.ca/images/Plunkett%20logo.jpg">
+
+  <!-- Twitter cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HVAC & Propane Services in Bancroft, ON | Plunkett Propane Services Ltd">
+  <meta name="twitter:description" content="Local HVAC + propane contractor serving Bancroft and surrounding areas since 2005. Furnaces, fireplaces, hydronic heating, generators, and more.">
+  <meta name="twitter:image" content="https://plunkettpropane.ca/images/Plunkett%20logo.jpg">
 
   <!-- Favicons & Web Manifest-->
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
@@ -15,7 +31,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
   <link rel="shortcut icon" href="/images/favicon/favicon.ico">
   <link rel="manifest" href="/images/favicon/site.webmanifest">
-  <link rel="canonical" href="https://plunkettpropane.ca/" />
   <meta name="theme-color" content="#086b41">
 
   <!-- 1) Library CSS -->
@@ -26,15 +41,9 @@
   <!-- 2) custom overrides -->
   <style>
     /* Override W3.CSS .w3-green everywhere */
-    .w3-green {
-      background-color: #086b41 !important;
-    }
-    .w3-hover-green:hover {
-      background-color: #086b41 !important;
-    }
-    .w3-text-green {
-      color: #086b41 !important;
-    }
+    .w3-green { background-color: #086b41 !important; }
+    .w3-hover-green:hover { background-color: #086b41 !important; }
+    .w3-text-green { color: #086b41 !important; }
 
     body { font-family: "Lato", sans-serif; }
     .mySlides { display: none; }
@@ -48,6 +57,7 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: transform 0.2s;
       background: #fafafa;
+      height: 100%;
     }
     .service-card:hover {
       transform: translateY(-5px);
@@ -62,7 +72,19 @@
     /* Adjust spacing under navbar */
     #featured-image {
       margin: 100px auto 40px auto;
-      max-width: 800px;
+      max-width: 900px;
+    }
+
+    /* Sticky CTA buttons */
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .cta-row a {
+      text-decoration: none;
     }
 
     /* Contact-info styling */
@@ -70,164 +92,350 @@
       padding: 60px 20px;
       color: white;
     }
-    #contact-info h2 {
-      margin-bottom: 40px;
-    }
+    #contact-info h2 { margin-bottom: 20px; }
     #contact-info .contact-data {
-      max-width: 600px;
+      max-width: 720px;
       margin: 0 auto;
-      font-size: 1.5rem;
-      line-height: 2;
+      font-size: 1.25rem;
+      line-height: 1.9;
       text-align: center;
     }
-    #contact-info i {
-      margin-right: 8px;
-    }
+    #contact-info i { margin-right: 8px; }
 
     /* About Section styling (green background) */
     #ABOUT {
-      background-color: #086b41; /* brand green */
+      background-color: #086b41;
       color: white;
       padding: 80px 20px 60px 20px;
     }
-    #ABOUT h2, 
-    #ABOUT p,
-    #ABOUT strong {
-      color: white;
-    }
-    #ABOUT img {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+    #ABOUT h2, #ABOUT p, #ABOUT strong { color: white; }
+    #ABOUT img { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 
-    /* two‑column list for service areas */
+    /* two-column list for service areas */
     .service-areas {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 600px;
-    column-count: 2;
-    column-gap: 2rem;
-    text-align: left;
-  }
-  .service-areas li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 720px;
+      column-count: 2;
+      column-gap: 2rem;
+      text-align: left;
+    }
+    .service-areas li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
     }
 
     /* Footer styling (green background) */
     footer {
-      background: #086b41;     /* brand green */
+      background: #086b41;
       color: white;
       padding: 20px 0;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
     footer a {
-      color: #e4f2ea;          /* light link color */
+      color: #e4f2ea;
       text-decoration: none;
       font-weight: bold;
     }
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a:hover { text-decoration: underline; }
 
-    /* Slideshow (Past Work) */
+  /* --- Slideshow (Past Work) FIXED + Smooth --- */
+
     .slideshow-container {
       max-width: 1000px;
       position: relative;
       margin: 40px auto;
+
+      /* keeps arrow position stable and avoids layout jump */
+      min-height: 520px; /* tweak if you want taller/shorter */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
+
+    /* each slide overlays in the same spot */
+    .mySlides {
+      position: absolute;
+      inset: 0;
+      display: none; /* JS toggles */
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    /* when active, show as flex so it centers nicely */
+    .mySlides.active {
+      display: flex;
+      animation: fadeIn 0.35s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* Make slide images uniform and prevent arrow shift */
+    .mySlides img {
+      width: min(80%, 760px);   /* consistent visual size */
+      height: auto;
+      max-height: 480px;        /* keeps container height stable */
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* captions always sit at the bottom, consistent */
     .slideshow-caption {
       position: absolute;
-      bottom: 8px;
       left: 16px;
+      bottom: 16px;
       color: white;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.55);
       padding: 8px 12px;
       border-radius: 4px;
       font-size: 1rem;
     }
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 0 3px 3px 0;
-      background: rgba(0, 0, 0, 0.5);
-      user-select: none;
-    }
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
 
-        /* Testimonials carousel */
-    .review-slideshow-container {
-      max-width: 700px;
-      position: relative;
-      margin: 40px auto;
-    }
-    .reviewSlides {
-      display: none;
-    }
-    .review-slideshow-container .w3-card {
-      background: #f9f9f9;
-      border-left: 4px solid #086b41;
-    }
-    .prevReview, .nextReview {
+    /* arrows fixed in same location always */
+    .prev, .next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      padding: 12px;
-      font-size: 24px;
-      color: #086b41;
+      z-index: 5;
+
       cursor: pointer;
+      padding: 14px 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.45);
       user-select: none;
+
+      /* makes it easier to click on mobile */
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .prevReview { left: -30px; }
-    .nextReview { right: -30px; }
-    .prevReview:hover, .nextReview:hover { color: #044f27; }
+
+    .prev { left: 14px; }
+    .next { right: 14px; }
+
+    .prev:hover, .next:hover {
+      background: rgba(0,0,0,0.75);
+    }
+
+    /* optional: ensure arrows are always clickable over images */
+    .prev, .next { pointer-events: auto; }
+
+    /* Testimonials carousel */
+  .review-slideshow-container {
+    max-width: 850px;
+    position: relative;
+    margin: 40px auto;
+
+    /* keeps arrow position stable */
+    min-height: 260px;  /* increase if needed for long quotes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* each review overlays in same spot */
+  .reviewSlides {
+    position: absolute;
+    inset: 0;
+    display: none;             /* JS toggles */
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .reviewSlides.active {
+    display: flex;
+    animation: fadeIn 0.35s ease-in-out;
+  }
+
+  /* the card itself */
+  .review-slideshow-container .w3-card {
+    width: min(92%, 760px);
+    background: #f9f9f9;
+    border-left: 4px solid #086b41;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center inside card */
+    align-items: center;     /* horizontal center inside card */
+    text-align: center;
+    height: 100%;
+  }
+
+  /* fixed arrow buttons */
+  .prevReview, .nextReview {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    color: #086b41;
+    background: rgba(255,255,255,0.85);
+
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .prevReview { left: 10px; }
+  .nextReview { right: 10px; }
+
+  .prevReview:hover, .nextReview:hover {
+    background: rgba(255,255,255,1);
+    color: #044f27;
+  }
+    /* FAQ styling */
+    .faq-item { margin: 14px 0; }
+    .faq-q { font-weight: bold; }
+    .faq-a { margin-top: 6px; color: #333; }
   </style>
-  <!-- Local Business Structured Data -->
+
+  <!-- Robust Schema Graph (LocalBusiness + Services + FAQ) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "name": "Plunkett Propane Services Ltd",
-    "url": "https://plunkettpropane.ca",
-    "logo": "https://plunkettpropane.ca/images/Plunkett%20logo.jpg",
-    "telephone": "+1-613-332-6231",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bancroft",
-      "addressRegion": "ON",
-      "addressCountry": "CA"
-    },
-    "areaServed": [
-      "Bancroft",
-      "Barry’s Bay",
-      "Apsley",
-      "Haliburton",
-      "North Kawartha",
-      "Wilberforce",
-      "Maynooth",
-      "Hastings Highlands",
-      "Stoney Lake"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://plunkettpropane.ca/#website",
+        "url": "https://plunkettpropane.ca/",
+        "name": "Plunkett Propane Services Ltd",
+        "publisher": { "@id": "https://plunkettpropane.ca/#business" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://plunkettpropane.ca/#webpage",
+        "url": "https://plunkettpropane.ca/",
+        "name": "HVAC & Propane Services in Bancroft, ON | Plunkett Propane Services Ltd",
+        "isPartOf": { "@id": "https://plunkettpropane.ca/#website" },
+        "about": { "@id": "https://plunkettpropane.ca/#business" },
+        "primaryImageOfPage": { "@id": "https://plunkettpropane.ca/#logo" }
+      },
+      {
+        "@type": "HVACBusiness",
+        "@id": "https://plunkettpropane.ca/#business",
+        "name": "Plunkett Propane Services Ltd",
+        "url": "https://plunkettpropane.ca/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://plunkettpropane.ca/#logo",
+          "url": "https://plunkettpropane.ca/images/Plunkett%20logo.jpg"
+        },
+        "image": [
+          "https://plunkettpropane.ca/images/Plunkett%20logo.jpg"
+        ],
+        "telephone": "+1-613-332-6231",
+        "email": "plunkett@live.ca",
+        "foundingDate": "2005",
+        "priceRange": "$$",
+        "description": "Local HVAC and propane contractor serving Bancroft, ON and surrounding areas since 2005. Furnaces, fireplaces, hydronic/in-floor heating, standby generators, propane appliances, and HVAC repair/maintenance.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bancroft",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Bancroft, ON" },
+          { "@type": "City", "name": "Barry’s Bay, ON" },
+          { "@type": "City", "name": "Apsley, ON" },
+          { "@type": "City", "name": "Haliburton, ON" },
+          { "@type": "AdministrativeArea", "name": "North Kawartha, ON" },
+          { "@type": "City", "name": "Wilberforce, ON" },
+          { "@type": "City", "name": "Maynooth, ON" },
+          { "@type": "AdministrativeArea", "name": "Hastings Highlands, ON" },
+          { "@type": "Place", "name": "Stoney Lake, ON" }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+1-613-332-6231",
+            "contactType": "customer service",
+            "areaServed": "CA-ON",
+            "availableLanguage": ["English"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+1-613-339-2065",
+            "contactType": "customer service",
+            "areaServed": "CA-ON",
+            "availableLanguage": ["English"]
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "HVAC & Propane Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Installation & Repair", "serviceType": ["HVAC installation","HVAC repair","HVAC maintenance"], "areaServed": "Bancroft, ON" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Propane Furnace Installation", "serviceType": ["furnace installation","propane furnace"], "areaServed": "Bancroft, ON" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heat Pump Installation & Service", "serviceType": ["heat pump installation","heat pump service"], "areaServed": "Bancroft, ON" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Propane Fireplace Installation, Cleaning & Repair", "serviceType": ["fireplace installation","fireplace cleaning","fireplace repair"], "areaServed": "Bancroft, ON" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hydronic & In-Floor Heating", "serviceType": ["hydronic heating","radiant floor heating","in-floor heating"], "areaServed": "Bancroft, ON" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Standby Generator Installation", "serviceType": ["generator installation","standby generator"], "areaServed": "Bancroft, ON" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Propane Appliances (Water Heaters, Stoves, Dryers)", "serviceType": ["propane appliance installation","propane water heater","propane stove","propane dryer"], "areaServed": "Bancroft, ON" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://plunkettpropane.ca/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you service cottages and rural properties around Bancroft?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We serve Bancroft and surrounding communities including Barry’s Bay, Apsley, Haliburton, North Kawartha, Wilberforce, Maynooth, Hastings Highlands, and Stoney Lake."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What HVAC and propane services do you offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide HVAC installation, repair, and maintenance along with propane furnaces, fireplaces, hydronic/in-floor heating, standby generators, and propane appliance installation and service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer emergency service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If you have an urgent issue, call our emergency line at 613-332-6231."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
-
 </head>
-<body>
 
+<body>
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
@@ -238,20 +446,22 @@
       <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
       <a href="#SERVICES" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
       <a href="#ABOUT" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+      <a href="#FAQ" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
       <a href="#contact-info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
       <div class="w3-dropdown-hover w3-hide-small">
         <button class="w3-padding-large w3-button" title="More">
           OUR VENDORS <i class="fa fa-caret-down"></i>
         </button>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="https://www.napoleon.com/en/ca/fireplaces" class="w3-bar-item w3-button">Napoleon</a>
-          <a href="https://www.regency-fire.com/en/default.aspx" class="w3-bar-item w3-button">Regency</a>
-          <a href="https://www.keeprite.com/en/us/" class="w3-bar-item w3-button">KeepRite</a>
-          <a href="https://www.continentalcomfort.com/en/home/" class="w3-bar-item w3-button">Continental</a>
-          <a href="https://www.lifebreath.com/" class="w3-bar-item w3-button">Lifebreath</a>
-          <a href="https://www.bradfordwhite.com/" class="w3-bar-item w3-button">Bradford White</a>
-          <a href="https://www.empirecomfort.com/" class="w3-bar-item w3-button">Empire Comfort</a>
-          <a href="https://www.usboiler.net/" class="w3-bar-item w3-button">US Boiler Company</a>
+          <a href="https://www.napoleon.com/en/ca/fireplaces" class="w3-bar-item w3-button" rel="nofollow">Napoleon</a>
+          <a href="https://www.regency-fire.com/en/default.aspx" class="w3-bar-item w3-button" rel="nofollow">Regency</a>
+          <a href="https://www.keeprite.com/en/us/" class="w3-bar-item w3-button" rel="nofollow">KeepRite</a>
+          <a href="https://www.continentalcomfort.com/en/home/" class="w3-bar-item w3-button" rel="nofollow">Continental</a>
+          <a href="https://www.lifebreath.com/" class="w3-bar-item w3-button" rel="nofollow">Lifebreath</a>
+          <a href="https://www.bradfordwhite.com/" class="w3-bar-item w3-button" rel="nofollow">Bradford White</a>
+          <a href="https://www.empirecomfort.com/" class="w3-bar-item w3-button" rel="nofollow">Empire Comfort</a>
+          <a href="https://www.usboiler.net/" class="w3-bar-item w3-button" rel="nofollow">US Boiler Company</a>
         </div>
       </div>
     </div>
@@ -263,49 +473,79 @@
        style="margin-top:46px">
     <a href="#SERVICES" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
     <a href="#ABOUT" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+    <a href="#FAQ" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
     <a href="#contact-info" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
     <div class="w3-bar-item">OUR VENDORS:</div>
-      <a href="https://www.napoleon.com/en/ca/fireplaces" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Napoleon</a>
-      <a href="https://www.regency-fire.com/en/default.aspx" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Regency</a>
-      <a href="https://www.keeprite.com/en/us/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">KeepRite</a>
-      <a href="https://www.continentalcomfort.com/en/home/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Continental</a>
-      <a href="https://www.lifebreath.com/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Lifebreath</a>
-      <a href="https://www.bradfordwhite.com/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Bradford White</a>
-      <a href="https://www.empirecomfort.com/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Empire Comfort</a>
-      <a href="https://www.usboiler.net/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">US Boiler Company</a>
-    </div>
+    <a href="https://www.napoleon.com/en/ca/fireplaces" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">Napoleon</a>
+    <a href="https://www.regency-fire.com/en/default.aspx" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">Regency</a>
+    <a href="https://www.keeprite.com/en/us/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">KeepRite</a>
+    <a href="https://www.continentalcomfort.com/en/home/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">Continental</a>
+    <a href="https://www.lifebreath.com/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">Lifebreath</a>
+    <a href="https://www.bradfordwhite.com/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">Bradford White</a>
+    <a href="https://www.empirecomfort.com/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">Empire Comfort</a>
+    <a href="https://www.usboiler.net/" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" rel="nofollow">US Boiler Company</a>
+  </div>
 
   <!-- Page content -->
   <div class="w3-content" style="max-width:2000px; margin-top:46px;">
 
     <!-- Banner / Logo -->
-    <div id="featured-image" class="w3-container w3-content w3-center w3-padding-64">
-      <img 
-        src="images/Plunkett logo.jpg" 
-        alt="Plunkett Propane Logo" 
+    <header id="featured-image" class="w3-container w3-content w3-center w3-padding-64">
+      <img
+        src="images/Plunkett logo.jpg"
+        alt="Plunkett Propane Services Ltd logo"
         style="width:100%; height:auto;"
+        loading="eager"
+        fetchpriority="high"
       />
-      <h2 class="w3-wide w3-center" style="margin-top:46px">CELEBRATING 20 YEARS!</h2>
-    </div>
+
+      <!-- NEW: Proper H1 for SEO -->
+      <h1 class="w3-wide w3-center" style="margin-top:28px">
+        HVAC & Propane Services in Bancroft, Ontario
+      </h1>
+
+      <p class="w3-center" style="max-width:900px; margin: 12px auto 0 auto;">
+        Serving Bancroft, Hastings Highlands, and surrounding areas since 2005 — propane furnaces, fireplaces, hydronic & in-floor heating, standby generators, and HVAC installation & repair.
+      </p>
+
+      <div class="cta-row">
+        <a class="w3-button w3-green w3-round-large w3-padding-large" href="tel:6133326231" aria-label="Call Plunkett Propane Services at 613-332-6231">
+          <i class="fa fa-phone"></i> Call 613-332-6231
+        </a>
+        <a class="w3-button w3-white w3-border w3-round-large w3-padding-large" href="mailto:plunkett@live.ca" aria-label="Email Plunkett Propane Services">
+          <i class="fa fa-envelope"></i> Email for a Quote
+        </a>
+        <a class="w3-button w3-white w3-border w3-round-large w3-padding-large" href="#SERVICES" aria-label="View services">
+          <i class="fa fa-wrench"></i> View Services
+        </a>
+      </div>
+
+      <h2 class="w3-wide w3-center" style="margin-top:26px">CELEBRATING 20 YEARS!</h2>
+    </header>
 
     <!-- Contact Section -->
-    <div id="contact-info" class="w3-container w3-green">
+    <section id="contact-info" class="w3-container w3-green">
       <h2 class="w3-wide w3-center">CONTACT US</h2>
       <div class="contact-data">
         <p><i class="fa fa-map-marker"></i> Bancroft, ON</p>
-        <p><i class="fa fa-phone"></i> 613-332-6231</p>
-        <p><i class="fa fa-phone"></i> 613-339-2065</p>
+        <p><i class="fa fa-phone"></i> <a href="tel:6133326231" style="color: inherit; text-decoration: underline;">613-332-6231</a></p>
+        <p><i class="fa fa-phone"></i> <a href="tel:6133392065" style="color: inherit; text-decoration: underline;">613-339-2065</a></p>
         <p><i class="fa fa-envelope"></i>
-        <a href="mailto:plunkett@live.ca" style="color: inherit; text-decoration: underline;">
-          plunkett@live.ca
-        </a>
+          <a href="mailto:plunkett@live.ca" style="color: inherit; text-decoration: underline;">plunkett@live.ca</a>
+        </p>
       </div>
-    </div>
+    </section>
 
     <!-- Services Section -->
-    <div class="w3-container w3-content w3-padding-64" style="max-width:1000px;" id="SERVICES">
+    <section class="w3-container w3-content w3-padding-64" style="max-width:1000px;" id="SERVICES">
       <h2 class="w3-wide w3-center">OUR SERVICES</h2>
-      <p class="w3-opacity w3-center"><i>Your comfort is our priority.</i></p><br>
+      <p class="w3-opacity w3-center"><i>Your comfort is our priority.</i></p>
+
+      <!-- NEW: keyword-rich intro that matches what people search -->
+      <p class="w3-center" style="max-width:900px; margin: 0 auto 22px auto;">
+        Looking for a trusted <strong>HVAC contractor in Bancroft</strong>? We provide <strong>HVAC installation, repair, and maintenance</strong> for residential and commercial customers — including
+        <strong>propane furnace installations</strong>, <strong>propane fireplace service</strong>, <strong>hydronic & in-floor heating</strong>, <strong>standby generators</strong>, and propane appliance installation.
+      </p>
 
       <!-- Services grid -->
       <div class="w3-row-padding" style="margin:0 -16px;">
@@ -313,7 +553,7 @@
           <div class="service-card">
             <i class="fa fa-cogs service-icon"></i>
             <h3>HVAC Installation & Repair</h3>
-            <p>Design, installation, maintenance and repair of propane heating & cooling systems—plus. Conversion of oil/wood systems to propane.</p>
+            <p>Design, installation, maintenance and repair of heating & cooling systems. Propane-focused solutions for homes, cottages, and businesses.</p>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
@@ -325,9 +565,9 @@
         </div>
         <div class="w3-third w3-margin-bottom">
           <div class="service-card">
-            <i class="fa fa-building service-icon"></i>
-            <h3>24/7 Service</h3>
-            <p>24/7 service for new construction and existing buildings within the residential and commercial landscape.</p>
+            <i class="fa fa-bolt service-icon"></i>
+            <h3>Emergency Service</h3>
+            <p>Urgent no-heat or propane-related issues? Call our emergency line for quick support.</p>
           </div>
         </div>
       </div>
@@ -335,7 +575,7 @@
       <div class="w3-row-padding" style="margin:0 -16px;">
         <div class="w3-third w3-margin-bottom">
           <div class="service-card">
-            <i class="fa fa-bolt service-icon"></i>
+            <i class="fa fa-plug service-icon"></i>
             <h3>Generator Installation</h3>
             <p>Standby generator setup and maintenance for uninterrupted power during outages.</p>
           </div>
@@ -344,260 +584,303 @@
           <div class="service-card">
             <i class="fa fa-tint service-icon"></i>
             <h3>Propane Appliances</h3>
-            <p>Sale, installation, and service of propane water heaters, dryers, stoves, in-floor heating systems, and more!</p>
+            <p>Water heaters, dryers, stoves, in-floor heating systems, and more — sale, installation, and service.</p>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
           <div class="service-card">
             <i class="fa fa-home service-icon"></i>
-            <h3>New & Existing Homes</h3>
-            <p>Design, installation, and service of complete propane solutions for new builds and existing home systems.</p>
+            <h3>New Builds & Existing Homes</h3>
+            <p>Complete propane and HVAC solutions for new construction, cottages, and retrofits.</p>
           </div>
         </div>
       </div>
-    </div>
 
-  <!-- About Section-->
-  <div id="ABOUT"
+      <!-- NEW: mini CTA -->
+      <div class="w3-center" style="margin-top:18px;">
+        <a class="w3-button w3-green w3-round-large w3-padding-large" href="tel:6133326231">
+          <i class="fa fa-phone"></i> Call for Service
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="ABOUT"
       class="w3-container w3-content w3-center w3-padding-64 w3-green w3-wide"
       style="max-width:900px;">
+      <h2>ABOUT US</h2>
+      <p class="w3-opacity"><i>Meet The Team</i></p>
 
-    <h2>ABOUT US</h2>
-    <p class="w3-opacity"><i>Meet The Team</i></p>
-    <p class="w3-justify w3-center" style="max-width:800px; margin:auto;">
-      Founded in 2005, Plunkett Propane Services Ltd has been a trusted name in heating and propane appliance solutions throughout Bancroft and the surrounding area. We specialize in furnaces, fireplaces, ductwork, propane water heaters, air conditioners, standby generators, and everything in between with a strong focus on new construction homes and cottages. Additionally, we specialize in converting wood and oil heating systems to propane, guiding you through the process from start to finish for a seamless transition. Our experienced team is dedicated to delivering top-quality installations and customized solutions to ensure your comfort year-round. With three generations of experience, you can trust Plunkett Propane Services Ltd for reliable service, expert advice, and exceptional craftsmanship.
-    </p>
+      <p class="w3-justify w3-center" style="max-width:820px; margin:auto;">
+        Founded in 2005, Plunkett Propane Services Ltd has been a trusted name in heating and propane appliance solutions throughout Bancroft and the surrounding area.
+        We specialize in furnaces, fireplaces, ductwork, propane water heaters, air conditioners, standby generators, and everything in between — with a strong focus on new construction homes and cottages.
+        We also convert wood and oil heating systems to propane, guiding you through the process from start to finish for a seamless transition.
+      </p>
 
-    <!-- service list -->
-    <h3 class="w3-text-white w3-center w3-margin-top">Proudly Serving</h3>
-    <ul class="service-areas">
-      <li>Bancroft</li>
-      <li>Barry’s Bay</li>
-      <li>Apsley</li>
-      <li>Haliburton</li>
-      <li>North Kawartha</li>
-      <li>Wilberforce</li>
-      <li>Maynooth</li>
-      <li>Hastings Highlands</li>
-      <li>Stoney Lake</li>
-      <li>And Surrounding Area!</li>
-    </ul>
-  </div>
+      <h3 class="w3-text-white w3-center w3-margin-top">Proudly Serving</h3>
+      <ul class="service-areas">
+        <li>Bancroft</li>
+        <li>Barry’s Bay</li>
+        <li>Apsley</li>
+        <li>Haliburton</li>
+        <li>North Kawartha</li>
+        <li>Wilberforce</li>
+        <li>Maynooth</li>
+        <li>Hastings Highlands</li>
+        <li>Stoney Lake</li>
+        <li>And Surrounding Area!</li>
+      </ul>
+    </section>
 
-      <!-- Commented out until portraits are ready
-      <div class="w3-row w3-padding-32">
-        <div class="w3-third">
-          <p><strong>Trevor Plunkett</strong></p>
-          <img src="images/Trevor.jpg" class="w3-round w3-margin-bottom" alt="Trevor Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        </div>
-        <div class="w3-third">
-          <p><strong>Virginia Plunkett</strong></p>
-          <img src="images/Virginia.jpg" class="w3-round w3-margin-bottom" alt="Virginia Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        </div>
-        <div class="w3-third">
-          <p><strong>Owen Plunkett</strong></p>
-          <img src="images/Owen.jpg" class="w3-round" alt="Owen Plunkett" style="width:60%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        </div>
+    <!-- NEW: FAQ section (matches FAQ schema above) -->
+    <section class="w3-container w3-content w3-padding-32" style="max-width:900px;" id="FAQ">
+      <h2 class="w3-wide w3-center">FAQ</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Do you service cottages and rural properties around Bancroft?</div>
+        <div class="faq-a">Yes. We serve Bancroft and surrounding communities including Barry’s Bay, Apsley, Haliburton, North Kawartha, Wilberforce, Maynooth, Hastings Highlands, Stoney Lake, and more!</div>
       </div>
-      -->
-    </div>
 
-<!-- Testimonials Section -->
-<div class="w3-container w3-content w3-padding-32" style="max-width:800px;" id="TESTIMONIALS">
-  <h2 class="w3-wide w3-center">WHAT OUR CUSTOMERS SAY</h2>
+      <div class="faq-item">
+        <div class="faq-q">What HVAC and propane services do you offer?</div>
+        <div class="faq-a">We provide HVAC installation, repair, and maintenance along with propane furnaces, fireplaces, hydronic boilers, in-floor heating, standby generators, and propane appliance installation and service.</div>
+      </div>
 
-  <div class="review-slideshow-container">
-    <!-- Slide 1 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“For anyone looking for a new furnace, I highly recommend Plunkett Propane Services Ltd. Their prices are the best around and Trevor knows his stuff, inside and out!! He went above and beyond our expectations and Virginia is a sweetheart to do business with. He got an early morning call from me and came right over to fix the issue. Turns out it wasn't even his issue, it was the propane delivery service we use. You guys are the best!!”</p>
-      <p><strong>Marie M.</strong> — ★★★★★</p>
-    </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer emergency service?</div>
+        <div class="faq-a">Yes. If you have an urgent issue, call our emergency line at <a href="tel:6133326231">613-332-6231</a>.</div>
+      </div>
+    </section>
 
-    <!-- Slide 2 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“We can't thank Plunkett Propane enough for their patient and professional service! We were stranded with no heat on a Sunday night and they were there for us. They talked me through and helped troubleshoot and were able to get our furnace up and running again. They truly saved the day. I never usually give reviews but I had to for them. 10 out of 10 thank you for Trevor and Virginia!!! Highly recommended!”</p>
-      <p><strong>Richard</strong> — ★★★★★</p>
-    </div>
+    <!-- Testimonials Section -->
+    <section class="w3-container w3-content w3-padding-32" style="max-width:900px;" id="TESTIMONIALS">
+      <h2 class="w3-wide w3-center">WHAT OUR CUSTOMERS SAY</h2>
 
-    <!-- Slide 3 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Plunkett recently installed a propane furnace and fireplace. Absolutely amazing job- professional installation, on-time, answered all of our questions!! Would highly recommend them for any service or installation needs.”</p>
-      <p><strong>Sean C.</strong> — ★★★★★</p>
-    </div>
+      <div class="review-slideshow-container">
+        <!-- Slide 1 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“For anyone looking for a new furnace, I highly recommend Plunkett Propane Services Ltd. Their prices are the best around and Trevor knows his stuff, inside and out!! He went above and beyond our expectations and Virginia is a sweetheart to do business with. He got an early morning call from me and came right over to fix the issue. Turns out it wasn't even his issue, it was the propane delivery service we use. You guys are the best!!”</p>
+          <p><strong>Marie M.</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 4 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Straight up business! Trevor and Virginia answered all my questions, quote was accurate and installation of a new propane furnace was professionally done and on time. I recommend highly. You won't be disappointed.”</p>
-      <p><strong>JP</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 2 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“We can't thank Plunkett Propane enough for their patient and professional service! We were stranded with no heat on a Sunday night and they were there for us. They talked me through and helped troubleshoot and were able to get our furnace up and running again. They truly saved the day. I never usually give reviews but I had to for them. 10 out of 10 thank you for Trevor and Virginia!!! Highly recommended!"</p>
+          <p><strong>Richard</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 5 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Plunkett Propane is, quite simply, the best. Trevor Plunkett came by himself and gave me a straight estimate. The estimate was based on an honest assessment of our challenges. Plunkett Propane came when they said they would, installed the furnace in a day and the invoice was, to the penny, what they had estimated. If only the rest of the world worked this way. I am a huge fan”</p>
-      <p><strong>Rory G.</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 3 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Plunkett recently installed a propane furnace and fireplace. Absolutely amazing job- professional installation, on-time, answered all of our questions!! Would highly recommend them for any service or installation needs.”</p>
+          <p><strong>Sean C.</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 6 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Great job with the furnace install and support service afterwards. Recommended for sure.”</p>
-      <p><strong>Jeff S.</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 4 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Straight up business! Trevor and Virginia answered all my questions, quote was accurate and installation of a new propane furnace was professionally done and on time. I recommend highly. You won't be disappointed.”</p>
+          <p><strong>JP</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 7 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Virginia provided very useful information to us regarding the certification reports required to ensure the propane stove functions properly. Thank you so much for your help!!”</p>
-      <p><strong>Connie C.</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 5 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Plunkett Propane is, quite simply, the best. Trevor Plunkett came by himself and gave me a straight estimate. The estimate was based on an honest assessment of our challenges. Plunkett Propane came when they said they would, installed the furnace in a day and the invoice was, to the penny, what they had estimated. If only the rest of the world worked this way. I am a huge fan”</p>
+          <p><strong>Rory G.</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 8 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Fixed the propane issue at the office, very knowledgeable and a hard worker.”</p>
-      <p><strong>CottageRentals247.com</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 6 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“I am going to add to my comment below. We moved and had furnace problems in our new house. I called a major provider and they said that I needed a new furnace and it would cost me 5300. I called Plunkett. They replaced the circuit board and got my furnace up and running and saved me 5000 dollars. Their integrity and honesty I don't think is all that common. They are an excellent business.”</p>
+          <p><strong>Rory G.</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 9 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Does great work”</p>
-      <p><strong>Joe H.</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 7 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Great job with the furnace install and support service afterwards. Recommended for sure.”</p>
+          <p><strong>Jeff S.</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slide 10 -->
-    <div class="reviewSlides w3-card w3-padding w3-center">
-      <p class="w3-large">“Last fall, Plunkett's installed a new propane furnace for me. The work that was completed reflected the detailed quote that Virginia provided to me ahead of time, on schedule and exactly as promised. The quality of workmanship was exemplary. Trevor spent lots of time teaching me about my new furnace (I had a lot of questions as a propane newbie!) and came back a few times after the installation when I had more questions and to adjust and tweak settings to make sure that I had exactly what I needed. Recently, I required a quick, but critical service call due to my own naivity. Within hours, Trevor attended and fixed my problem with a smile and a handshake. Thank you for making me feel like your most important customer from they day I made my first contact with Plunkett Propane Services. I would recommend Trevor, Virginia and their team without hesitation for all your propane needs.”</p>
-      <p><strong>Andra K.</strong> — ★★★★★</p>
-    </div>
+        <!-- Slide 8 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Virginia provided very useful information to us regarding the certification reports required to ensure the propane stove functions properly. Thank you so much for your help!!”</p>
+          <p><strong>Connie C.</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Prev/Next -->
-    <a class="prevReview" onclick="plusReviewSlides(-1)">❮</a>
-    <a class="nextReview" onclick="plusReviewSlides(1)">❯</a>
-  </div>
-</div>
+        <!-- Slide 9 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Fixed the propane issue at the office, very knowledgeable and a hard worker.”</p>
+          <p><strong>CottageRentals247.com</strong> — ★★★★★</p>
+        </div>
 
-    <!-- Slideshow Section-->
-    <div class="w3-container w3-content w3-padding-32" style="max-width:1000px;" id="portfolio">
+        <!-- Slide 10 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Does great work”</p>
+          <p><strong>Joe H.</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Last fall, Plunkett's installed a new propane furnace for me... I would recommend Trevor, Virginia and their team without hesitation for all your propane needs.”</p>
+          <p><strong>Andra K.</strong> — ★★★★★</p>
+        </div>
+        
+        <!-- Slide 12 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Top notch company from the front office to the field. My furnace failed at the start of a cold snap (naturally) but Trevor and Owen came to the rescue within a day. Fast, friendly, competent service!”</p>
+          <p><strong>Tom R.</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Excellent customer service, fast, reliable, and knowledgeable. Last year it was -20 and when I arrived home our furnace had stopped working…it was 5:30 pm. I made a few calls and Plunkett’s Propane showed up and had us up and running in no time with a part on order. This year we decided to add a propane fireplace to our basement and we went right back to Plunketts to complete the job and they are fantastic and so easy to work with! Thank you Trevor and crew!! 😊”</p>
+          <p><strong>Lisa H.</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Plunkett propane services is an easy recommend. I appreciate their quick responses, courteous service and attention to detail while installing and relocating my propane furnace.”</p>
+          <p><strong>Zappywaif</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Slide 15 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Excellent customer service and highly knowledgeable. Reasonable prices. We’ve had Trevor out twice for 2 different issues and highly satisfied both times.”</p>
+          <p><strong>Jodi M.</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Prev/Next -->
+        <a class="prevReview" onclick="plusReviewSlides(-1)" aria-label="Previous testimonial">❮</a>
+        <a class="nextReview" onclick="plusReviewSlides(1)" aria-label="Next testimonial">❯</a>
+      </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="w3-container w3-content w3-padding-32" style="max-width:1000px;" id="portfolio">
       <h2 class="w3-wide w3-center">PAST WORK</h2>
       <div class="slideshow-container">
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/fireplace.png" style="width:50%; border-radius:8px;">
+          <img src="slideshow/fireplace.png" style="width:50%; border-radius:8px;" alt="Propane fireplace installation in Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Residential fireplace installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/furnace.png" style="width:50%; border-radius:8px;">
+          <img src="slideshow/furnace.png" style="width:50%; border-radius:8px;" alt="Propane furnace installation in Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Residential furnace installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/ductWork.png" style="width:50%; border-radius:8px;">
+          <img src="slideshow/ductWork.png" style="width:50%; border-radius:8px;" alt="Residential ductwork design and installation near Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Residential duct work design and installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/islandTanks.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/islandTanks.JPEG" style="width:50%; border-radius:8px;" alt="Propane tank installation for cottage property near Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Island propane tank installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/mantleFireplace.JPEG" style="width:50%; border-radius:8px;">
-          <div class="slideshow-caption">Residential fireplace installation</div>
-        </div>
-        
-        <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/basementFireplace.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/mantleFireplace.JPEG" style="width:50%; border-radius:8px;" alt="Mantle propane fireplace installation in Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Residential fireplace installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/kitchenRange.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/basementFireplace.JPEG" style="width:50%; border-radius:8px;" alt="Basement propane fireplace installation near Bancroft Ontario" loading="lazy">
+          <div class="slideshow-caption">Residential fireplace installation</div>
+        </div>
+
+        <div class="mySlides w3-display-container w3-center">
+          <img src="slideshow/kitchenRange.JPEG" style="width:50%; border-radius:8px;" alt="Kitchen propane range installation near Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Kitchen range installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/heatPump.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/heatPump.JPEG" style="width:50%; border-radius:8px;" alt="Heat pump installation in Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Heat pump installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/airConditioner.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/airConditioner.JPEG" style="width:50%; border-radius:8px;" alt="Air conditioner installation in Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Air conditioner installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/hydronicBoiler.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/hydronicBoiler.JPEG" style="width:50%; border-radius:8px;" alt="Hydronic boiler installation near Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">Hydronic boiler installation</div>
         </div>
 
         <div class="mySlides w3-display-container w3-center">
-          <img src="slideshow/inFloorHeating.JPEG" style="width:50%; border-radius:8px;">
+          <img src="slideshow/inFloorHeating.JPEG" style="width:50%; border-radius:8px;" alt="In-floor heating installation near Bancroft Ontario" loading="lazy">
           <div class="slideshow-caption">In floor heating installation</div>
         </div>
 
-        <!-- Next/Prev Buttons -->
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <a class="prev" onclick="plusSlides(-1)" aria-label="Previous photo">❮</a>
+        <a class="next" onclick="plusSlides(1)" aria-label="Next photo">❯</a>
       </div>
-    </div>
-  </div> 
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer>
     <div class="footer-logos">
-      <img src="credentialphotos/tssa.png" alt="TSSA Accreditation">
-      <img src="credentialphotos/hrai.png" alt="HRAI Accreditation">
+      <img src="credentialphotos/tssa.png" alt="TSSA Accreditation" loading="lazy">
+      <img src="credentialphotos/hrai.png" alt="HRAI Accreditation" loading="lazy">
     </div>
-    <p>Designed by <a href="https://www.linkedin.com/in/gavin-plunkett" target="_blank">Gavin Plunkett</a></p>
+
+    <!-- NEW: NAP consistency -->
+    <p style="margin-top:12px;">
+      <strong>Plunkett Propane Services Ltd</strong> • Bancroft, ON •
+      <a href="tel:6133326231">613-332-6231</a> •
+      <a href="mailto:plunkett@live.ca">plunkett@live.ca</a>
+    </p>
+
+    <p>Designed by <a href="https://www.linkedin.com/in/gavin-plunkett" target="_blank" rel="noopener">Gavin Plunkett</a></p>
   </footer>
 
   <!-- Scripts -->
-   <script>
-  // Testimonials slideshow
-  var reviewIndex = 1;
+  <script>
+    // Testimonials slideshow
+    var reviewIndex = 1;
   showReviewSlides(reviewIndex);
-  function plusReviewSlides(n) {
-    showReviewSlides(reviewIndex += n);
-  }
+
+  function plusReviewSlides(n) { showReviewSlides(reviewIndex += n); }
+
   function showReviewSlides(n) {
     var i, slides = document.getElementsByClassName("reviewSlides");
     if (n > slides.length) reviewIndex = 1;
     if (n < 1) reviewIndex = slides.length;
+
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
+      slides[i].classList.remove("active");
     }
-    slides[reviewIndex - 1].style.display = "block";
-  }
-</script>
-  <script>
 
+    slides[reviewIndex - 1].style.display = "flex";   // <-- KEY FIX
+    slides[reviewIndex - 1].classList.add("active");  // <-- KEY FIX
+  }
+  </script>
+
+  <script>
     // Mobile nav toggle
     function myFunction() {
       var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") === -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
+      if (x.className.indexOf("w3-show") === -1) x.className += " w3-show";
+      else x.className = x.className.replace(" w3-show", "");
     }
 
     // Slideshow logic
     var slideIndex = 1;
     showSlides(slideIndex);
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+    function plusSlides(n) { showSlides(slideIndex += n); }
 
     function showSlides(n) {
       var i;
       var slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) { slideIndex = 1; }
-      if (n < 1) { slideIndex = slides.length; }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
       slides[slideIndex - 1].style.display = "block";
     }
   </script>
 </body>
 </html>
-
