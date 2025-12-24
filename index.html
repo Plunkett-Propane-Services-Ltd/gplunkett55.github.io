@@ -312,6 +312,30 @@
     .faq-item { margin: 14px 0; }
     .faq-q { font-weight: bold; }
     .faq-a { margin-top: 6px; color: #333; }
+
+  /*prevent testimonial text from being clipped*/
+  @media (max-width: 600px) {
+    .review-slideshow-container {
+      min-height: 0;          /* allow it to grow */
+      height: auto;           /* grow with content */
+      overflow: visible;      /* don't clip the card */
+      padding: 0 56px;        /* space so arrows don't overlap text */
+    }
+
+    .reviewSlides {
+      position: relative;     /* stop absolute overlay on mobile */
+      inset: auto;
+      padding: 0;
+    }
+
+    .review-slideshow-container .w3-card {
+      width: 100%;
+    }
+
+    .prevReview { left: 6px; }
+    .nextReview { right: 6px; }
+  }
+
   </style>
 
   <!-- Robust Schema Graph (LocalBusiness + Services + FAQ) -->
