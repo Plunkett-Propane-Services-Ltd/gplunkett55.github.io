@@ -439,10 +439,11 @@
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-         href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+      <button class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          type="button" onclick="myFunction()" title="Toggle Navigation Menu"
+          aria-label="Toggle navigation menu" aria-controls="navDemo" aria-expanded="false">
         <i class="fa fa-bars"></i>
-      </a>
+      </button>
       <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
       <a href="#SERVICES" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
       <a href="#ABOUT" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
@@ -748,8 +749,9 @@
         </div>
 
         <!-- Prev/Next -->
-        <a class="prevReview" onclick="plusReviewSlides(-1)" aria-label="Previous testimonial">❮</a>
-        <a class="nextReview" onclick="plusReviewSlides(1)" aria-label="Next testimonial">❯</a>
+        <button class="prevReview" type="button" onclick="plusReviewSlides(-1)" aria-label="Previous testimonial">❮</button>
+        <button class="nextReview" type="button" onclick="plusReviewSlides(1)" aria-label="Next testimonial">❯</button>
+
       </div>
     </section>
 
@@ -813,8 +815,8 @@
           <div class="slideshow-caption">In floor heating installation</div>
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)" aria-label="Previous photo">❮</a>
-        <a class="next" onclick="plusSlides(1)" aria-label="Next photo">❯</a>
+        <button class="prev" type="button" onclick="plusSlides(-1)" aria-label="Previous photo">❮</button>
+        <button class="next" type="button" onclick="plusSlides(1)" aria-label="Next photo">❯</button>
       </div>
     </section>
   </div>
