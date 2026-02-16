@@ -235,50 +235,46 @@
     /* optional: ensure arrows are always clickable over images */
     .prev, .next { pointer-events: auto; }
 
-    /* Testimonials carousel */
+  /* Testimonials carousel — NO CLIPPING */
   .review-slideshow-container {
     max-width: 850px;
     position: relative;
     margin: 40px auto;
 
-    /* keeps arrow position stable */
-    min-height: 260px;  /* increase if needed for long quotes */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    /* allow the container to grow with the active slide */
+    height: auto;
+    overflow: visible;
+
+    /* keep arrows centered relative to container */
+    padding: 0 56px; /* space so arrows don't cover text */
   }
 
-  /* each review overlays in same spot */
+  /* slides are in normal document flow now */
   .reviewSlides {
-    position: absolute;
-    inset: 0;
-    display: none;             /* JS toggles */
-    align-items: center;
-    justify-content: center;
-    padding: 12px 0;
+    display: none;
   }
 
   .reviewSlides.active {
-    display: flex;
+    display: block;
     animation: fadeIn 0.35s ease-in-out;
   }
 
-  /* the card itself */
-  .review-slideshow-container .w3-card {
-    width: min(92%, 760px);
+  /* card sizing */
+  .reviewSlides.w3-card {
+    width: 100%;
     background: #f9f9f9;
     border-left: 4px solid #086b41;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical center inside card */
-    align-items: center;     /* horizontal center inside card */
+    padding: 22px 22px;
     text-align: center;
-    height: 100%;
+
+    /* ensure long text wraps */
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
-  /* fixed arrow buttons */
+  /* arrows stay fixed */
   .prevReview, .nextReview {
     position: absolute;
     top: 50%;
@@ -304,10 +300,10 @@
   .prevReview { left: 10px; }
   .nextReview { right: 10px; }
 
-  .prevReview:hover, .nextReview:hover {
-    background: rgba(255,255,255,1);
-    color: #044f27;
-  }
+.prevReview:hover, .nextReview:hover {
+  background: rgba(255,255,255,1);
+  color: #044f27;
+}
     /* FAQ styling */
     .faq-item { margin: 14px 0; }
     .faq-q { font-weight: bold; }
@@ -845,6 +841,24 @@
           <p><strong>Jodi M.</strong> — ★★★★★</p>
         </div>
 
+        <!-- Slide 16 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Came up to the house today, temperature was reading 40 Degrees. But by being female, I wasn’t quite sure what to do with it so I just called Plunkett and a nice young lady there named Virginia, ran me through a couple of options to check and all in all we worked it out and it was the batteries in the thermostat very nice of them to do that instead of charging me a service call. I. Will call again if I ever have any problem.”</p>
+          <p><strong>Nancy M.</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Slide 17 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“When our store furnace broke down in -15 degree weather and it was only 13 degrees inside, Plunkett Propane arrived quickly to diagnose the problem. Unfortunately it was unable to be repaired but they installed a brand new furnace and we were warm again in no time. They kept everything clean and tidy and didn't disrupt our business at all. Even though they were working outdoors in that very cold temperature, they were professional, efficient and kept smiling. We can't thank them enough for their exceptional response time and service”</p>
+          <p><strong>Lee B.</strong> — ★★★★★</p>
+        </div>
+
+        <!-- Slide 18 -->
+        <div class="reviewSlides w3-card w3-padding w3-center">
+          <p class="w3-large">“Trevor and Virginia were absolutely phenomenal in making sure my mom had reliable heat. What could have been a stressful situation was handled with incredible dedication and care. They made multiple visits, thoroughly diagnosed the issue, completed the necessary repairs, and never gave up until everything was working perfectly. Their persistence truly paid off. Not only were they highly professional and knowledgeable, but they were also genuinely kind and proactive — even going the extra mile to contact the propane supplier on our behalf to ensure everything was resolved. That level of service is rare. I can’t recommend Plunkett Propane Services highly enough. If you’re looking for a team that truly cares and stands behind their work, they are the ones to call.”</p>
+          <p><strong>Janet J.</strong> — ★★★★★</p>
+        </div>
+
         <!-- Prev/Next -->
         <button class="prevReview" type="button" onclick="plusReviewSlides(-1)" aria-label="Previous testimonial">❮</button>
         <button class="nextReview" type="button" onclick="plusReviewSlides(1)" aria-label="Next testimonial">❯</button>
@@ -960,7 +974,7 @@
       slides[i].classList.remove("active");
     }
 
-    slides[reviewIndex - 1].style.display = "flex";   // <-- KEY FIX
+    slides[reviewIndex - 1].style.display = "block";   // <-- KEY FIX
     slides[reviewIndex - 1].classList.add("active");  // <-- KEY FIX
   }
   </script>
